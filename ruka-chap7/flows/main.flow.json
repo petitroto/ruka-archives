@@ -11,7 +11,7 @@
       "name": "entry",
       "next": [
         {
-          "condition": "event.preview === 's'",
+          "condition": "event.type === 'proactive-trigger'",
           "node": "node-83e9"
         },
         {
