@@ -1,0 +1,34 @@
+.bpw-floating-button {
+  margin: 12px 10px 5px;
+  border-radius: 50%;
+  background: bottom / contain no-repeat url("banner.png") white;
+}
+
+.bpw-floating-button i {
+  display: none;
+}
+
+.bpw-widget-btn:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  padding: 2px;
+  content: 'お困りですか?';
+  font-size: 11px;
+  letter-spacing: -0.2em;
+  border-radius: 3px;
+  background: palevioletred;
+  color: white;
+  animation: 6s linear 10s 10 normal forwards running flash;
+  opacity: 0;
+}
+
+@keyframes flash {
+  from, 96%, to {
+    opacity: 1;
+  }
+
+  98% {
+    opacity: 0;
+  }
+}

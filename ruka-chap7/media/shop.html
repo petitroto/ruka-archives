@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Shop Dolphin</title>
+  <style>
+    body {
+      margin: 30px;
+      background: #fffffa;
+      color: #554;
+      font-family: cursive;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .info {
+      width: 50ch;
+    }
+
+    .phone > div {
+      width: 160px;
+      height: 320px;
+      margin: 20px 70px;
+      padding: 20px;
+      border-radius: 10px;
+      border: 5px solid #b0b0b0;
+      background: #a0a0a0;
+    }
+  </style>
+</head>
+<body>
+<header><h1>Shop Dolphin</h1></header>
+<main>
+  <section class="phone">
+    <div>●</div>
+  </section>
+  <section class="info">
+    <h2 id="prd_name">iPhone21 256GB</h2>
+    <h3 id="prd_price">￥49,800</h3>
+    <h4 id="prd_stock">In Stock</h4>
+    <p>Lorem ipsum dolor sit amet, sit quot vulputate ad, at mundi timeam apeirian per. Ut prompta imperdiet scripserit
+      usu, mea aperiri imperdiet ei. Cum cu omnis inimicus definitionem. Nostro delenit offendit eu eum, et aeque
+      probatus urbanitas usu, ut est duis natum. Eu albucius voluptatum interesset eos.</p>
+  </section>
+</main>
+
+<script src="http://localhost:3000/assets/modules/channel-web/inject.js"></script>
+<script>
+  // 指定したIDのタグでマークアップされたテキストを取得するヘルパー関数
+  function getContentById(id) {
+    return document.getElementById(id).textContent;
+  }
+
+  // このページの商品情報をHTML要素から抽出してwebContextを作る
+  var webContext = {
+    thisProduct: {
+      name: getContentById('prd_name'),
+      price: getContentById('prd_price'),
+      stock: getContentById('prd_stock') === 'In Stock'
+    }
+  };
+
+  // WebChatの初期化
+  window.botpressWebChat.init({
+    extraStylesheet: 'api/v1/bots/ruka/media/webchat.css',
+    host: 'http://localhost:3000',
+    botId: 'ruka'
+  });
+
+  // プロアクティブ化
+  window.addEventListener('message', function (event) {
+    if (event.data.name === 'webchatOpened') {
+      window.botpressWebChat.sendEvent({
+        type: 'proactive-trigger',
+        channel: 'web',
+        // トリガーイベントにwebContextを文字列化して載せる
+        payload: {text: JSON.stringify(webContext)}
+      });
+    }
+  });
+</script>
+
+</body>
+</html>

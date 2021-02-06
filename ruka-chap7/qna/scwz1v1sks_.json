@@ -1,0 +1,26 @@
+{
+  "id": "scwz1v1sks_",
+  "data": {
+    "action": "text_redirect",
+    "contexts": [
+      "global"
+    ],
+    "enabled": true,
+    "answers": {
+      "ja": [
+        "{{#user.webContext.thisProduct}}\nこちらの商品「{{name}}」は、{{#stock}}まだ在庫がございます。ご注文はお早めに！{{/stock}}{{^stock}}在庫切れです。申し訳ありません。{{/stock}}\n{{/user.webContext.thisProduct}}\n{{^user.webContext.thisProduct}}\nどの商品のことでしょうか？改めて商品ページでご質問ください。\n{{/user.webContext.thisProduct}}"
+      ]
+    },
+    "questions": {
+      "ja": [
+        "在庫ある？",
+        "まだ在庫ありますか？",
+        "注文できますか？",
+        "これ買えますか？",
+        "残りいくつですか？"
+      ]
+    },
+    "redirectFlow": "main.flow.json",
+    "redirectNode": "ask-guide-retry"
+  }
+}

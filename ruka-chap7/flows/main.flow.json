@@ -1,0 +1,154 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "onReceive": [],
+    "next": []
+  },
+  "startNode": "entry",
+  "nodes": [
+    {
+      "id": "entry",
+      "name": "entry",
+      "next": [
+        {
+          "condition": "event.preview === 's'",
+          "node": "node-83e9"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'ask'",
+          "node": "node-0846"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'find'",
+          "node": "node-3071"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'other'",
+          "node": "node-0005"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'quit'",
+          "node": "node-aaef"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'query'",
+          "node": "Search.flow.json"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'cancel'",
+          "node": "node-e064"
+        },
+        {
+          "condition": "event.nlu.intent.name === 'none'",
+          "node": "node-86ca"
+        }
+      ],
+      "onEnter": [],
+      "onReceive": null
+    },
+    {
+      "id": "4d4ce457ec",
+      "name": "node-83e9",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-bYL7Gs",
+        "say #!builtin_text-5x0jPS",
+        "say #!builtin_single-choice-31aIYH"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "5313c38f1b",
+      "name": "node-0846",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-Zgkw9M",
+        "say #!builtin_text-vkPRqG",
+        "say #!builtin_single-choice-Pqko5H"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c0aa31aa3b",
+      "name": "node-3071",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-29yU-h",
+        "say #!builtin_single-choice-DuEbvB"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "10fb113160",
+      "name": "node-0005",
+      "next": [
+        {
+          "condition": "true",
+          "node": "Fallback.flow.json"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-RE0Vfd"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "f7386f5b3d",
+      "name": "node-aaef",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_single-choice-LFmh4X"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "c16963d05c",
+      "name": "node-0f50",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-zAp_IU",
+        "say #!builtin_text-j3IPK6",
+        "say #!builtin_single-choice-DuEbvB"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "6782305ff1",
+      "name": "node-e064",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-Zgkw9M",
+        "say #!builtin_single-choice-31aIYH"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "1733e1cb4e",
+      "name": "node-86ca",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_single-choice-3US4to"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "73373fd829",
+      "name": "ask-guide-retry",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-KL9fXj",
+        "say #!builtin_single-choice-Pqko5H"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

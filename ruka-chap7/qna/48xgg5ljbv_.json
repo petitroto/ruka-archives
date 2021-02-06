@@ -1,0 +1,26 @@
+{
+  "id": "48xgg5ljbv_",
+  "data": {
+    "action": "text_redirect",
+    "contexts": [
+      "global"
+    ],
+    "enabled": true,
+    "answers": {
+      "ja": [
+        "{{#user.webContext.thisProduct}}\nこちらの商品「{{name}}」は、税込 {{price}}円です。\n{{/user.webContext.thisProduct}}\n{{^user.webContext.thisProduct}}\nどの商品のことでしょうか？改めて商品ページでご質問ください。\n{{/user.webContext.thisProduct}}"
+      ]
+    },
+    "questions": {
+      "ja": [
+        "これいくら？",
+        "価格は？",
+        "値段は？",
+        "何円？",
+        "これなんぼ？"
+      ]
+    },
+    "redirectFlow": "main.flow.json",
+    "redirectNode": "ask-guide-retry"
+  }
+}

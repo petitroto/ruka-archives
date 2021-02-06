@@ -1,0 +1,67 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "ef512b0af6",
+      "name": "entry",
+      "onEnter": [
+        "buildQueryString {}"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "CallAPI-search"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-db3a9e",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-search",
+      "flow": "skills/CallAPI-db3a9e.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": "search-success"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": "search-failure"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "321e1ca910",
+      "name": "search-success",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-Df-9Kv",
+        "say #!builtin_text-j3IPK6",
+        "say #!builtin_single-choice-DuEbvB"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "feb0fccf45",
+      "name": "search-failure",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-QIsd_2",
+        "say #!builtin_single-choice-DuEbvB"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}

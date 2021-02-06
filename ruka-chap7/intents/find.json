@@ -1,0 +1,16 @@
+{
+  "name": "find",
+  "utterances": {
+    "ja": [
+      "探している商品がある",
+      "商品検索したい",
+      "iPhoneが見つからない",
+      "iPhoneの取り扱いはありますか",
+      "iPhone売ってますか"
+    ]
+  },
+  "slots": [],
+  "contexts": [
+    "global"
+  ]
+}

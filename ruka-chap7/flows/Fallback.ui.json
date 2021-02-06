@@ -1,0 +1,248 @@
+{
+  "nodes": [
+    {
+      "id": "de744c8683",
+      "position": {
+        "x": 35,
+        "y": 35
+      }
+    },
+    {
+      "id": "skill-db7732",
+      "position": {
+        "x": 55,
+        "y": 180
+      }
+    },
+    {
+      "id": "85d7d582ef",
+      "position": {
+        "x": 270,
+        "y": 35
+      }
+    },
+    {
+      "id": "skill-3ce6a4",
+      "position": {
+        "x": 285,
+        "y": 230
+      }
+    },
+    {
+      "id": "5ec1927bce",
+      "position": {
+        "x": 505,
+        "y": 35
+      }
+    },
+    {
+      "id": "fc9141ad0a",
+      "position": {
+        "x": 505,
+        "y": 235
+      }
+    },
+    {
+      "id": "3c6267ce59",
+      "position": {
+        "x": 75,
+        "y": 325
+      }
+    },
+    {
+      "id": "22edf16e3b",
+      "position": {
+        "x": 730,
+        "y": 35
+      }
+    },
+    {
+      "id": "skill-03288f",
+      "position": {
+        "x": 745,
+        "y": 295
+      }
+    },
+    {
+      "id": "70b9e5ac7e",
+      "position": {
+        "x": 965,
+        "y": 35
+      }
+    },
+    {
+      "id": "b1acbb26ce",
+      "position": {
+        "x": 965,
+        "y": 195
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "22edf16e3b",
+      "sourcePort": "out0",
+      "target": "skill-03288f",
+      "points": [
+        {
+          "x": 930,
+          "y": 258
+        },
+        {
+          "x": 746,
+          "y": 312
+        }
+      ]
+    },
+    {
+      "source": "5ec1927bce",
+      "sourcePort": "out0",
+      "target": "22edf16e3b",
+      "points": [
+        {
+          "x": 705,
+          "y": 210
+        },
+        {
+          "x": 731,
+          "y": 52
+        }
+      ]
+    },
+    {
+      "source": "85d7d582ef",
+      "sourcePort": "out0",
+      "target": "skill-3ce6a4",
+      "points": [
+        {
+          "x": 470,
+          "y": 193
+        },
+        {
+          "x": 285,
+          "y": 247
+        }
+      ]
+    },
+    {
+      "source": "de744c8683",
+      "sourcePort": "out0",
+      "target": "skill-db7732",
+      "points": [
+        {
+          "x": 235,
+          "y": 133
+        },
+        {
+          "x": 56,
+          "y": 197
+        }
+      ]
+    },
+    {
+      "source": "fc9141ad0a",
+      "sourcePort": "out0",
+      "target": "22edf16e3b",
+      "points": [
+        {
+          "x": 705,
+          "y": 435
+        },
+        {
+          "x": 731,
+          "y": 52
+        }
+      ]
+    },
+    {
+      "source": "skill-03288f",
+      "sourcePort": "out0",
+      "target": "70b9e5ac7e",
+      "points": [
+        {
+          "x": 945,
+          "y": 338
+        },
+        {
+          "x": 965,
+          "y": 52
+        }
+      ]
+    },
+    {
+      "source": "skill-03288f",
+      "sourcePort": "out1",
+      "target": "b1acbb26ce",
+      "points": [
+        {
+          "x": 945,
+          "y": 369
+        },
+        {
+          "x": 965,
+          "y": 212
+        }
+      ]
+    },
+    {
+      "source": "skill-3ce6a4",
+      "sourcePort": "out0",
+      "target": "5ec1927bce",
+      "points": [
+        {
+          "x": 485,
+          "y": 273
+        },
+        {
+          "x": 506,
+          "y": 52
+        }
+      ]
+    },
+    {
+      "source": "skill-3ce6a4",
+      "sourcePort": "out1",
+      "target": "fc9141ad0a",
+      "points": [
+        {
+          "x": 485,
+          "y": 304
+        },
+        {
+          "x": 506,
+          "y": 252
+        }
+      ]
+    },
+    {
+      "source": "skill-db7732",
+      "sourcePort": "out1",
+      "target": "3c6267ce59",
+      "points": [
+        {
+          "x": 255,
+          "y": 254
+        },
+        {
+          "x": 76,
+          "y": 343
+        }
+      ]
+    },
+    {
+      "source": "skill-db7732",
+      "sourcePort": "out0",
+      "target": "85d7d582ef",
+      "points": [
+        {
+          "x": 255,
+          "y": 223
+        },
+        {
+          "x": 271,
+          "y": 52
+        }
+      ]
+    }
+  ]
+}

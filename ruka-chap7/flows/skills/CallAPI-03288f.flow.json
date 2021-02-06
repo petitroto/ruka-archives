@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1",
+  "catchAll": {
+    "next": []
+  },
+  "startNode": "entry",
+  "skillData": {
+    "method": "post",
+    "memory": "temp",
+    "body": "{\n  \"nickname\": \"{{user.nickname}}\",\n  \"telno\": \"{{temp.telno}}\",\n  \"email\": \"{{temp.email}}\",\n  \"chatlog\": \"{{temp.chatlog}}\"\n}",
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "url": "http://localhost:3030/inquiry",
+    "variable": "response",
+    "invalidJson": false
+  },
+  "nodes": [
+    {
+      "name": "entry",
+      "onEnter": [
+        "basic-skills/call_api {\"url\":\"http://localhost:3030/inquiry\",\"method\":\"post\",\"body\":\"{\\n  \\\"nickname\\\": \\\"{{user.nickname}}\\\",\\n  \\\"telno\\\": \\\"{{temp.telno}}\\\",\\n  \\\"email\\\": \\\"{{temp.email}}\\\",\\n  \\\"chatlog\\\": \\\"{{temp.chatlog}}\\\"\\n}\",\"headers\":{\"Content-Type\":\"application/json; charset=utf-8\"},\"memory\":\"temp\",\"variable\":\"response\"}"
+      ],
+      "next": [
+        {
+          "condition": "true",
+          "node": "#"
+        }
+      ],
+      "id": "715452"
+    }
+  ]
+}

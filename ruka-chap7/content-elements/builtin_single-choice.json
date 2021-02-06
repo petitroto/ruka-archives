@@ -1,0 +1,157 @@
+[
+  {
+    "id": "builtin_single-choice-31aIYH",
+    "formData": {
+      "choices$ja": [
+        {
+          "title": "この商品について質問がある",
+          "value": "ask"
+        },
+        {
+          "title": "探している商品がある",
+          "value": "find"
+        },
+        {
+          "title": "他に頼みがある",
+          "value": "other"
+        },
+        {
+          "title": "特に用はない",
+          "value": "quit"
+        }
+      ],
+      "markdown$ja": false,
+      "typing$ja": false,
+      "text$ja": "何かお手伝いできることはありますか？"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-12-09T11:07:50.945Z",
+    "modifiedOn": "2020-12-29T12:13:50.505Z"
+  },
+  {
+    "id": "builtin_single-choice-Pqko5H",
+    "formData": {
+      "choices$ja": [
+        {
+          "title": "価格は？",
+          "value": "price"
+        },
+        {
+          "title": "在庫ある？",
+          "value": "stock"
+        },
+        {
+          "title": "最初に戻る",
+          "value": "restart"
+        }
+      ],
+      "markdown$ja": false,
+      "typing$ja": false,
+      "text$ja": "以下の質問例からお選びいただくか、ご自由に入力してください。"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-12-28T05:57:36.583Z",
+    "modifiedOn": "2020-12-29T00:55:42.083Z"
+  },
+  {
+    "id": "builtin_single-choice-DuEbvB",
+    "formData": {
+      "choices$ja": [
+        {
+          "title": "3万円以下のある？",
+          "value": "query1"
+        },
+        {
+          "title": "3万円以上かつ5万円未満のを検索",
+          "value": "query2"
+        },
+        {
+          "title": "最初に戻る",
+          "value": "restart"
+        }
+      ],
+      "markdown$ja": false,
+      "typing$ja": false,
+      "text$ja": "以下の入力例からお選びいただくか、ご自由に入力してください。"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-12-28T06:00:50.983Z",
+    "modifiedOn": "2020-12-29T00:56:02.558Z"
+  },
+  {
+    "id": "builtin_single-choice-LFmh4X",
+    "formData": {
+      "choices$ja": [
+        {
+          "title": "最初に戻る",
+          "value": "restart"
+        }
+      ],
+      "markdown$ja": false,
+      "typing$ja": false,
+      "text$ja": "ご利用ありがとうございました。"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-12-29T07:35:22.151Z",
+    "modifiedOn": "2020-12-29T07:35:22.151Z"
+  },
+  {
+    "id": "builtin_single-choice-3US4to",
+    "formData": {
+      "choices$ja": [
+        {
+          "title": "最初に戻る",
+          "value": "restart"
+        }
+      ],
+      "markdown$ja": false,
+      "typing$ja": false,
+      "text$ja": "申し訳ございません。もう一度、別の言い方でおっしゃっていただけますか。"
+    },
+    "createdBy": "admin",
+    "createdOn": "2020-12-29T07:35:40.801Z",
+    "modifiedOn": "2020-12-29T07:35:40.801Z"
+  },
+  {
+    "id": "builtin_single-choice-2A9-6C",
+    "formData": {
+      "choices$ja": [
+        {
+          "title": "はい",
+          "value": "yes"
+        },
+        {
+          "title": "いいえ",
+          "value": "no"
+        }
+      ],
+      "markdown$ja": false,
+      "typing$ja": false,
+      "text$ja": "よろしければ、私から担当の者へお繋ぎしますが、いかがでしょうか？"
+    },
+    "createdBy": "admin",
+    "createdOn": "2021-01-10T10:55:41.391Z",
+    "modifiedOn": "2021-01-10T10:55:41.391Z"
+  },
+  {
+    "id": "builtin_single-choice-WQ6HG3",
+    "formData": {
+      "choices$ja": [
+        {
+          "title": "電話",
+          "value": "phone"
+        },
+        {
+          "title": "メール",
+          "value": "email"
+        }
+      ],
+      "markdown$ja": false,
+      "typing$ja": false,
+      "text$ja": "どのような連絡方法を希望されますか？"
+    },
+    "createdBy": "admin",
+    "createdOn": "2021-01-10T10:56:04.901Z",
+    "modifiedOn": "2021-01-10T10:56:04.901Z"
+  }
+]

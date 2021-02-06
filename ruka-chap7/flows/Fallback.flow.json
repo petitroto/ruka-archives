@@ -1,0 +1,203 @@
+{
+  "version": "0.0.1",
+  "catchAll": {},
+  "startNode": "entry",
+  "description": "",
+  "nodes": [
+    {
+      "id": "de744c8683",
+      "name": "entry",
+      "onEnter": [
+        "say #!builtin_text-P8tdXo"
+      ],
+      "onReceive": null,
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-begin"
+        }
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-db7732",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-begin",
+      "flow": "skills/choice-db7732.flow.json",
+      "next": [
+        {
+          "caption": "User picked [yes]",
+          "condition": "temp['skill-choice-ret-zyqik9t1qq'] == \"yes\"",
+          "node": "intro"
+        },
+        {
+          "caption": "User picked [no]",
+          "condition": "temp['skill-choice-ret-zyqik9t1qq'] == \"no\"",
+          "node": "cancel"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "85d7d582ef",
+      "name": "intro",
+      "next": [
+        {
+          "condition": "true",
+          "node": "choice-channel"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-GPRv3Z",
+        "say #!builtin_text-7HKd77",
+        "makeChatlog {}"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "skill-3ce6a4",
+      "type": "skill-call",
+      "skill": "choice",
+      "name": "choice-channel",
+      "flow": "skills/choice-3ce6a4.flow.json",
+      "next": [
+        {
+          "caption": "User picked [phone]",
+          "condition": "temp['skill-choice-ret-deoiqcnxn3'] == \"phone\"",
+          "node": "ask-phone"
+        },
+        {
+          "caption": "User picked [email]",
+          "condition": "temp['skill-choice-ret-deoiqcnxn3'] == \"email\"",
+          "node": "ask-email"
+        },
+        {
+          "caption": "On failure",
+          "condition": "true",
+          "node": ""
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "5ec1927bce",
+      "name": "ask-phone",
+      "next": [
+        {
+          "condition": "true",
+          "node": "ask-name"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Zgkw9M",
+        "say #!builtin_text-kxWeuN"
+      ],
+      "onReceive": [
+        "say #!builtin_text-GPRv3Z",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"telno\",\"value\":\"{{event.preview}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "fc9141ad0a",
+      "name": "ask-email",
+      "next": [
+        {
+          "condition": "true",
+          "node": "ask-name"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-Zgkw9M",
+        "say #!builtin_text-_bKMAx"
+      ],
+      "onReceive": [
+        "say #!builtin_text-GPRv3Z",
+        "builtin/setVariable {\"type\":\"temp\",\"name\":\"email\",\"value\":\"{{event.preview}}\"}"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "3c6267ce59",
+      "name": "cancel",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-Zgkw9M",
+        "say #!builtin_text-gjHHhw"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "22edf16e3b",
+      "name": "ask-name",
+      "next": [
+        {
+          "condition": "true",
+          "node": "CallAPI-inquiry"
+        }
+      ],
+      "onEnter": [
+        "say #!builtin_text-FFp_0x"
+      ],
+      "onReceive": [
+        "say #!builtin_text-GPRv3Z",
+        "builtin/setVariable {\"type\":\"user\",\"name\":\"nickname\",\"value\":\"{{event.preview}}\"}",
+        "say #!builtin_text-1bHgUQ"
+      ],
+      "type": "standard"
+    },
+    {
+      "id": "skill-03288f",
+      "type": "skill-call",
+      "skill": "CallAPI",
+      "name": "CallAPI-inquiry",
+      "flow": "skills/CallAPI-03288f.flow.json",
+      "next": [
+        {
+          "caption": "On success",
+          "condition": "temp.valid",
+          "node": "end-success"
+        },
+        {
+          "caption": "On failure",
+          "condition": "!temp.valid",
+          "node": "end-failure"
+        }
+      ],
+      "onEnter": null,
+      "onReceive": null
+    },
+    {
+      "id": "70b9e5ac7e",
+      "name": "end-success",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-n04pfV",
+        "say #!builtin_text-AuUjGn"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    },
+    {
+      "id": "b1acbb26ce",
+      "name": "end-failure",
+      "next": [],
+      "onEnter": [
+        "say #!builtin_text-op6B7B",
+        "say #!builtin_text-_1zuBU"
+      ],
+      "onReceive": null,
+      "type": "standard"
+    }
+  ]
+}
