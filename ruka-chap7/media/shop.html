@@ -74,7 +74,7 @@
 
   // プロアクティブ化
   window.addEventListener('message', function (event) {
-    if (event.data.message_type === 'visit') { // 書籍の初版から変更
+    if (event.data.name === 'webchatReady') { // 書籍の初版から変更
       window.botpressWebChat.sendEvent({
         type: 'proactive-trigger',
         channel: 'web',
