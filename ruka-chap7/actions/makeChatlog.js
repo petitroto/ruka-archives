@@ -35,9 +35,7 @@
       .join('\n\n')
 
     // 文字列をエスケープして対話メモリへ格納する（前後のクォートは外す）
-    temp.chatlog = JSON.stringify(logText)
-      .slice(1)
-      .slice(0, -1)
+    temp.chatlog = JSON.stringify(logText).slice(1, -1)
   }
 
   return makeChatlog()
