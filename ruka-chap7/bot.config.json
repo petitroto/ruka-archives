@@ -14,7 +14,7 @@
   "$schema": "../../bot.config.schema.json",
   "description": "",
   "active": true,
-  "version": "12.16.2",
+  "version": "12.26.5",
   "author": "Botpress, Inc.",
   "license": "AGPL-3.0",
   "imports": {
@@ -28,7 +28,11 @@
       "builtin_image",
       "builtin_single-choice",
       "builtin_text",
-      "dropdown"
+      "dropdown",
+      "builtin_video",
+      "builtin_audio",
+      "builtin_file",
+      "builtin_location"
     ]
   },
   "dialog": {
@@ -46,8 +50,12 @@
   "pipeline_status": {
     "current_stage": {
       "id": "prod",
-      "promoted_on": "2021-01-27T16:10:08.660Z",
+      "promoted_on": "2021-11-03T20:17:05.830Z",
       "promoted_by": "system"
     }
+  },
+  "messaging": {
+    "id": "67f190c0-a3cd-4b0d-91c6-e7b20669c756",
+    "token": "Z8DCPy/URqyu5BToHPZeso+zlz3Pkovkc5voDY8fWmtF7OwVq7RVoWuIJH4di90OVEWxiUc8f4xp2hanVTZ3Ql5b"
   }
 }
