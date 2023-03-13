@@ -5,7 +5,7 @@
 
 ## 動作環境
 
-Botpress v12.16.3以上（v12.26.5まで動作確認済み）
+Botpress v12.16.3以上（v12.30.7まで動作確認済み）
 
 ## 利用方法
 
@@ -20,7 +20,7 @@ Botpress v12.16.3以上（v12.26.5まで動作確認済み）
 
 ### shop.html
 * イルカのアイコン画像のアトリビューションを追加。
-* proactive-triggerイベントを送信するタイミングを「webchatOpened」イベントではなく「visit」イベントの時に変更。webchatOpenedのタイミングでは、新規ユーザーの場合にuserスペースへのデータの保存が正しく行えないことが分かったため。
+* proactive-triggerイベントを送信するタイミングを「webchatOpened」イベントではなく「webchatReady」または「visit」イベントの時に変更。webchatOpenedのタイミングでは、新規ユーザーの場合にuserスペースへのデータの保存が正しく行えないことが分かったため。
 
 ### makeChatlog.js
 * 会話履歴を取得する方法を、WebChatモジュールのREST APIから、Botpress SDKを使う形に変更。

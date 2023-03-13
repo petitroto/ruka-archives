@@ -74,7 +74,8 @@
 
   // プロアクティブ化
   window.addEventListener('message', function (event) {
-    if (event.data.payload && event.data.payload.type === 'visit') { // v12.26に対応した書き方
+    if (event.data.payload && event.data.payload.type === 'visit' || // v12.26に対応した書き方
+      event.data.name === 'webchatReady') { // v12.30.7に対応した書き方
       window.botpressWebChat.sendEvent({
         type: 'proactive-trigger',
         channel: 'web',
